@@ -8,8 +8,8 @@ include:
 # Customize the job
 iac-sast:
   stage: test
-  tags:
-    - docker  # Use shared runners
+#  tags:
+#    - docker  # Use shared runners
   artifacts:
     reports:
       sast: gl-sast-report.json
