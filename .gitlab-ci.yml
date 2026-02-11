@@ -1,20 +1,37 @@
+image: hashicorp/terraform:light
+
 stages:
   - test
+  - plan
+  - apply
 
-# Include GitLab's official "Infrastructure as Code" scanner
 include:
   - template: Security/SAST-IaC.latest.gitlab-ci.yml
 
-# Customize the job
 iac-sast:
   stage: test
-#  tags:
-#    - docker  # Use shared runners
   artifacts:
     reports:
       sast: gl-sast-report.json
-    paths:
-      - gl-sast-report.json
-  # Optimization: Tell KICS to look inside your specific folder
   variables:
     SAST_IAC_PATH: "Multi-cloud_Infrastucture"
+
+plan:
+  stage: plan
+  script:
+    - cd Multi-cloud_Infrastucture
+    - terraform init
+    - terraform plan -out=tfplan
+  artifacts:
+    paths:
+      - Multi-cloud_Infrastucture/tfplan
+
+apply:
+  stage: apply
+  script:
+    - cd Multi-cloud_Infrastucture
+    - terraform init
+    - terraform apply -auto-approve tfplan
+  only:
+    - main
+  when: manual
