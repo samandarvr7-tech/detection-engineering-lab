@@ -25,7 +25,7 @@ variable "ssh_public_key" {
 
 resource "azurerm_resource_group" "example" {
   name     = "Infrastructure"
-  location = "West Europe"
+  location = "Central India"
 }
 # resource group name is required
 # loaction is required 
