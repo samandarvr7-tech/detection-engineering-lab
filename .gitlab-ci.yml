@@ -1,0 +1,20 @@
+stages:
+  - test
+
+# Include GitLab's official "Infrastructure as Code" scanner
+include:
+  - template: Security/SAST-IaC.latest.gitlab-ci.yml
+
+# Customize the job
+iac-sast:
+  stage: test
+  tags:
+    - docker  # Use shared runners
+  artifacts:
+    reports:
+      sast: gl-sast-report.json
+    paths:
+      - gl-sast-report.json
+  # Optimization: Tell KICS to look inside your specific folder
+  variables:
+    SAST_IAC_PATH: "Multi-cloud_Infrastucture"
