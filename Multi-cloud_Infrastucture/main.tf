@@ -55,7 +55,7 @@ resource "azurerm_network_interface" "example" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
-  enable_ip_forwarding = true 
+  ip_forwarding_enabled = true 
 
   ip_configuration {
     name                          = "internal"

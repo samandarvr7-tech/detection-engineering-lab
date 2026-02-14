@@ -18,6 +18,7 @@ resource "azurerm_network_interface" "windows-ad" {
 
 resource "azurerm_windows_virtual_machine" "windows-ad" {
   name                = "windows-ad-machine"
+  computer_name       = "win-ad-server"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   size                = "Standard_B2ls_v2"
