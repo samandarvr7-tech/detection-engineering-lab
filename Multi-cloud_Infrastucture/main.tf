@@ -125,7 +125,7 @@ resource "azurerm_network_security_group" "example" {
     destination_port_range     = "*"
     
     source_address_prefix      = "VirtualNetwork" 
-    destination_address_prefix = "VirtualNetwork"
+    destination_address_prefix = "*"
   }
 }
 
