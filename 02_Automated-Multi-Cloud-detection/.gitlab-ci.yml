@@ -18,22 +18,22 @@ iac-sast:
     reports:
       sast: gl-sast-report.json
   variables:
-    SAST_IAC_PATH: "Multi-cloud_Infrastucture"
+    SAST_IAC_PATH: "01_Infrastructure"
 
 plan:
   stage: plan
   script:
-    - cd Multi-cloud_Infrastucture
+    - cd 01_Infrastructure
     - terraform init
     - terraform plan -out=tfplan
   artifacts:
     paths:
-      - Multi-cloud_Infrastucture/tfplan
+      - 01_Infrastructure/tfplan
 
 apply:
   stage: deploy     
   script:
-    - cd Multi-cloud_Infrastucture
+    - cd 01_Infrastructure
     - terraform init
     - terraform apply -auto-approve tfplan
   dependencies:
@@ -46,7 +46,7 @@ apply:
 destroy:
   stage: deploy      
   script:
-    - cd Multi-cloud_Infrastucture
+    - cd 01_Infrastructure
     - terraform init
     - terraform destroy -auto-approve
   when: manual      
