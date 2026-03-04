@@ -57,3 +57,4 @@ To see exactly how I built, secured, and debugged this environment, please check
 
 * 📄 **[Preparation_Execution.md](./Preparation_Execution.md)** - Step-by-step guide on how I configured Nginx, automated the GitLab CI/CD pipelines, and integrated Semgrep and Trivy.
 * 📄 **[Troubleshooting.md](./Troubleshooting.md)** - A detailed log of the production incidents I faced (e.g., React localhost build traps, Nginx trailing slash 404s, Docker volume locks) and how I engineered solutions for them.
+* 📄 **[Security-Logs&Hardening.md](./05_security-logs&hardening.md)** - Security testings, vulnerabilities and remediation.
